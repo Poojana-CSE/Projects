@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Worker Interface</h1>
+    <form action="{{ url_for('worker_submit') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="id_number">ID Number:</label>
+        <input type="text" id="id_number" name="id_number" required><br><br>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+        
+        <label for="explanation">Explanation:</label>
+        <textarea id="explanation" name="explanation" rows="4" cols="50" required></textarea><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Check Request Status</h2>
+    <form action="{{ url_for('check_status') }}" method="post">
+        <label for="request_number">Enter Request Number:</label>
+        <input type="text" id="request_number" name="request_number" required>
+        <button type="submit">Check Status</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

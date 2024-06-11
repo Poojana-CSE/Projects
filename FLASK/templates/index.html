@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager View</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Manager View</h1>
+    <form action="{{ url_for('submit') }}" method="post">
+        {% for idx, request in enumerate(requests) %}
+            <div class="request">
+                <p>{{ request }}</p>
+                <label>
+                    <input type="radio" name="status_{{ idx }}" value="1"> Approved
+                </label>
+                <label>
+                    <input type="radio" name="status_{{ idx }}" value="2"> Not Approved
+                </label>
+            </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
