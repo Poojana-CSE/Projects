@@ -1,0 +1,20 @@
+Request 1:
+Name: Poojana S
+ID Number: 113
+Subject: Medical leave
+Explanation: Fever
+Status: pendding
+
+Request 2:
+Name: Poova
+ID Number: 114
+Subject: Casual leave
+Explanation: Fesitival
+Status: pendding
+
+Request 3:
+Name: Ganesh
+ID Number: 109
+Subject: Medical leave
+Explanation: Kachal
+Status: Not Approved
